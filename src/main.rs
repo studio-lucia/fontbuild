@@ -5,18 +5,10 @@ use std::io::prelude::*;
 use std::path::Path;
 use std::process::exit;
 
-extern crate clap;
-use clap::{Arg, App};
-
-extern crate glob;
-use glob::{glob, Paths};
-
-extern crate byteorder;
 use byteorder::{BigEndian, WriteBytesExt};
-
-extern crate png;
-
-extern crate regex;
+use clap::{Arg, App};
+use glob::{glob, Paths};
+use png;
 use regex::Regex;
 
 fn list_tiles(input_dir : &Path) -> Result<Paths, String> {
